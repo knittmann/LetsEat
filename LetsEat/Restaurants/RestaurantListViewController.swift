@@ -21,13 +21,17 @@ class RestaurantListViewController: UIViewController,  UICollectionViewDelegate 
     }
     
     /// Show a different list of restaurants each time the view appears onscreen depending on what location and cuisine the user
-    /// picks.
+    /// picks. The list of restaurants is loaded from the corresponding location json file.
     ///
     /// - Parameter animated: Whether to animate the transition or not.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("Selected city \(selectedCity as Any)")
-        print("Selected type \(selectedType as Any)")
+        guard let location = selectedCity?.city, let type = selectedType else {
+            return
+        }
+        
+        print("type \(type)")
+        print(RestaurantAPIManager.loadJSON(file: location))
     }
 }
 
