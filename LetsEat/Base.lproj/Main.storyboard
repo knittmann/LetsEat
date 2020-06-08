@@ -68,7 +68,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="jf9-Hv-Hok">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="jf9-Hv-Hok" customClass="RestaurantCell" customModule="LetsEat" customModuleProvider="target">
                                         <rect key="frame" x="19.5" y="0.0" width="375" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z9t-zd-rAM">
@@ -180,6 +180,9 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="imgRestaurant" destination="9sj-rL-Tbo" id="Ebu-rD-jTD"/>
+                                            <outlet property="lblCuisine" destination="5Wh-NG-nqS" id="lby-oL-287"/>
+                                            <outlet property="lblTitle" destination="0Yr-EC-9UD" id="WcC-P6-UhY"/>
                                             <segue destination="teS-sh-Seg" kind="show" id="QaU-gJ-LSB"/>
                                         </connections>
                                     </collectionViewCell>

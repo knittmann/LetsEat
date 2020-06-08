@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class RestaurantItem: NSObject, MKAnnotation {
+class RestaurantItem: NSObject, MKAnnotation, Decodable {
     
     var name: String?
     var cuisines: [String] = []
@@ -20,15 +20,16 @@ class RestaurantItem: NSObject, MKAnnotation {
     var state: String?
     var imageURL: String?
     
-    init(dict:[String:AnyObject]) {
-        if let lat = dict["lat"] as? Double { self.lat = lat }
-        if let long = dict["long"] as? Double { self.long = long }
-        if let name = dict["name"] as? String { self.name = name }
-        if let cuisines = dict["cuisines"] as? [String] { self.cuisines = cuisines }
-        if let address = dict["address"] as? String { self.address = address }
-        if let postalCode = dict["postalCode"] as? String { self.postalCode = postalCode }
-        if let state = dict["state"] as? String { self.state = state }
-        if let image = dict["image_url"] as? String { self.imageURL = image }
+    /// Match the `RestaurantItem` properties to the keys in the json file
+    enum CodingKeys: String, CodingKey {
+        case name
+        case cuisines
+        case lat
+        case long
+        case address
+        case postalCode = "postal_code"
+        case state
+        case imageURL = "image_url"
     }
     
     var title: String? {
