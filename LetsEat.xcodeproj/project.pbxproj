@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		303B6AED248D964A00EA89B2 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6AEC248D964A00EA89B2 /* RestaurantCell.swift */; };
 		303B6AF0248D983B00EA89B2 /* RestaurantDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6AEF248D983B00EA89B2 /* RestaurantDataManager.swift */; };
+		303B6AF3248E015100EA89B2 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6AF2248E015100EA89B2 /* NoDataView.swift */; };
+		303B6AF5248E01A500EA89B2 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 303B6AF4248E01A400EA89B2 /* NoDataView.xib */; };
 		30AD4DA5248CAB290087CD16 /* San Francisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D97248CAB290087CD16 /* San Francisco.json */; };
 		30AD4DA6248CAB290087CD16 /* Boston.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D98248CAB290087CD16 /* Boston.json */; };
 		30AD4DA7248CAB290087CD16 /* New York.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D99248CAB290087CD16 /* New York.json */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		303B6AEC248D964A00EA89B2 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		303B6AEF248D983B00EA89B2 /* RestaurantDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataManager.swift; sourceTree = "<group>"; };
+		303B6AF2248E015100EA89B2 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		303B6AF4248E01A400EA89B2 /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
 		30AD4D97248CAB290087CD16 /* San Francisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "San Francisco.json"; sourceTree = "<group>"; };
 		30AD4D98248CAB290087CD16 /* Boston.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Boston.json; sourceTree = "<group>"; };
 		30AD4D99248CAB290087CD16 /* New York.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "New York.json"; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 				303B6AEF248D983B00EA89B2 /* RestaurantDataManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		303B6AF1248E010900EA89B2 /* No Data */ = {
+			isa = PBXGroup;
+			children = (
+				303B6AF2248E015100EA89B2 /* NoDataView.swift */,
+				303B6AF4248E01A400EA89B2 /* NoDataView.xib */,
+			);
+			path = "No Data";
 			sourceTree = "<group>";
 		};
 		30AD4D96248CAAEB0087CD16 /* JSON */ = {
@@ -226,6 +239,7 @@
 		84E0FC402396A56700916540 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				303B6AF1248E010900EA89B2 /* No Data */,
 				30AD4D96248CAAEB0087CD16 /* JSON */,
 				84E0FC412396A58900916540 /* DataManager.swift */,
 				84E0FC4E2396B39800916540 /* Segue.swift */,
@@ -373,6 +387,7 @@
 				30AD4DB1248CAB290087CD16 /* San Antonio.json in Resources */,
 				30AD4DAB248CAB290087CD16 /* Los Angeles.json in Resources */,
 				30AD4DB2248CAB290087CD16 /* Houston.json in Resources */,
+				303B6AF5248E01A500EA89B2 /* NoDataView.xib in Resources */,
 				30AD4DA8248CAB290087CD16 /* Charleston.json in Resources */,
 				30AD4DAA248CAB290087CD16 /* Las Vegas.json in Resources */,
 				30AD4DA5248CAB290087CD16 /* San Francisco.json in Resources */,
@@ -407,6 +422,7 @@
 				84C54DEB238EB08700D7C4A7 /* AppDelegate.swift in Sources */,
 				84E4C86923900AC400B241E3 /* RestaurantListViewController.swift in Sources */,
 				84E0FC4F2396B39800916540 /* Segue.swift in Sources */,
+				303B6AF3248E015100EA89B2 /* NoDataView.swift in Sources */,
 				303B6AED248D964A00EA89B2 /* RestaurantCell.swift in Sources */,
 				84C54DED238EB08700D7C4A7 /* SceneDelegate.swift in Sources */,
 				84E0FC512396B4B900916540 /* RestaurantDetailViewController.swift in Sources */,
