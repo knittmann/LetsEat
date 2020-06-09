@@ -45,6 +45,9 @@ private extension RestaurantDetailViewController {
     /// Temporary method to hard-assign a rating for testing purposes.
     func createRating() {
         ratingView.rating = 3.5
+        
+        /// Setting the `isEnabled` property to `true` allows the ratings view to become the first responder and begin tracking touches, which will trigger `handle(with:)`, which in turn calls `updateRating(with:)`
+        ratingView.isEnabled = true
     }
     
     func initialize() {

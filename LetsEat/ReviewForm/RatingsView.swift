@@ -52,6 +52,27 @@ class RatingsView: UIControl {
             }
         }
     }
+    
+    /// Allow RatingsView to become first responder in order to respond to touch events.
+    override var canBecomeFirstResponder: Bool {
+        return shouldBecomeFirstResponder
+    }
+    
+    /// This method is called when the user touches any part of the ratings view on the screen. This is known as a touch event. First, it checks to see if the `isEnabled` property is `true`. If it is, the superclass implementation is called. After that, the ratings view on the screen is set to be the first responder, so it will capture touch events when it is touched and the `handle(with:)` method will be executed for every touch event.
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        if self.isEnabled {
+            super.beginTracking(touch, with: event)
+            
+            if (shouldBecomeFirstResponder && self.isFirstResponder) {
+                becomeFirstResponder()
+            }
+            
+            handle(with: touch)
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 private extension RatingsView {
@@ -66,5 +87,27 @@ private extension RatingsView {
     
     func draw(with image: UIImage, and frame: CGRect) {
         image.draw(in: frame)
+    }
+    
+    /// Takes a touch event as a parameter. First, `cellWidth` is assigned the ratings view's width, divided by the totalStars. Next, the touch event's location within the ratings view is assigned to `location`. Then, `value` is assigned the `x` position of `location`, divided by `cellWidth`. The if statement calculates the rating corresponding to the position of the touch and calls `updateRating(with:)`, passing it the value.
+    func handle(with touch: UITouch) {
+        let cellWidth = self.bounds.size.width / CGFloat(totalStars)
+        let location = touch.location(in: self)
+        var value = location.x / cellWidth
+        
+        if (value + 0.5 < CGFloat(ceilf(Float(value)))) {
+            value = floor(value) + 0.5
+        } else {
+            value = CGFloat(ceilf(Float(value)))
+        }
+        updateRating(with: value)
+    }
+    
+    /// Check to see if `value` is not equal to the current `rating` and between 0 and 5. If it is, `value` is assigned to `rating`, and the screen is redrawn.
+    func updateRating(with value: CGFloat) {
+        if (self.rating != value && value >= 0 && value <= CGFloat(totalStars)) {
+            self.rating = value
+            setNeedsDisplay()
+        }
     }
 }
