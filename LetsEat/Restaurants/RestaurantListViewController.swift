@@ -21,6 +21,17 @@ class RestaurantListViewController: UIViewController,  UICollectionViewDelegate 
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case Segue.showDetail.rawValue:
+                showRestaurantDetail(segue: segue)
+            default:
+                print("Segue not added")
+            }
+        }
+    }
+    
     /// Show a different list of restaurants each time the view appears onscreen depending on what location and cuisine the user
     /// picks. The list of restaurants is loaded from the corresponding location json file.
     ///
@@ -57,6 +68,15 @@ private extension RestaurantListViewController {
         }
         
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    func showRestaurantDetail(segue: UIStoryboardSegue) {
+        if let viewController = segue.destination as? RestaurantDetailViewController,
+            let index = collectionView.indexPathsForSelectedItems?
+                .first {
+            selectedRestaurant = manager.restaurantItem(at: index)
+            viewController.selectedRestaurant = selectedRestaurant
+        }
     }
 }
 

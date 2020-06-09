@@ -91,7 +91,9 @@ private extension RestaurantDetailViewController {
         mapSnapshotOptions.showsBuildings = true
         mapSnapshotOptions.pointOfInterestFilter = .includingAll
         
-        let snapShotter = MKMapSnapshotter(options: mapSnapshotOptions) snapShotter.start() { snapshot, error in guard
+        let snapShotter = MKMapSnapshotter(options: mapSnapshotOptions)
+        
+        snapShotter.start() { snapshot, error in guard
             let snapshot = snapshot else { return }
             UIGraphicsBeginImageContextWithOptions(mapSnapshotOptions.size, true, 0)
             snapshot.image.draw(at: .zero)
