@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s7z-iW-Bsm">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s7z-iW-Bsm">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Photo Filter View Controller-->
         <scene sceneID="OpZ-G3-rg9">
             <objects>
-                <viewController id="VI2-nK-ly1" sceneMemberID="viewController">
+                <viewController id="VI2-nK-ly1" customClass="PhotoFilterViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LOX-Xt-RDD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-0n-ut3">
@@ -25,7 +22,7 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RS5-5J-Wgc">
-                                <rect key="frame" x="0.0" y="400" width="375" height="203"/>
+                                <rect key="frame" x="0.0" y="400" width="375" height="223"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OI7-rY-Dp1">
                                     <size key="itemSize" width="116" height="203"/>
@@ -67,6 +64,7 @@
                                             <constraint firstAttribute="trailing" secondItem="ElC-Mf-BBR" secondAttribute="trailing" id="kvs-m5-jNJ"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="imgThumb" destination="ElC-Mf-BBR" id="a3x-Vz-Ll8"/>
                                             <outlet property="lblName" destination="vM6-ok-5gG" id="4yB-BT-9uy"/>
                                         </connections>
                                     </collectionViewCell>
@@ -87,14 +85,27 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="vgh-Nx-oKV">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AiM-gc-yKu"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AiM-gc-yKu">
+                            <connections>
+                                <segue destination="EnU-oO-uMh" kind="unwind" unwindAction="unwindReviewCancelWithSegue:" id="M2G-6m-6ED"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="save" id="LqQ-au-GU8"/>
-                            <barButtonItem image="icon-photo" id="kkC-ZD-maP"/>
+                            <barButtonItem image="icon-photo" id="kkC-ZD-maP">
+                                <connections>
+                                    <action selector="onPhotoTapped:" destination="VI2-nK-ly1" id="58A-W6-TPi"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="RS5-5J-Wgc" id="a34-gE-9G4"/>
+                        <outlet property="imgExample" destination="0N4-0n-ut3" id="GDy-ee-0Ah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwv-AM-zzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EnU-oO-uMh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4924" y="-152"/>
         </scene>
@@ -104,7 +115,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s7z-iW-Bsm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="F1i-S8-ObR">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

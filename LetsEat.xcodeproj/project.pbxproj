@@ -17,6 +17,8 @@
 		303B6B03248F654100EA89B2 /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B02248F654100EA89B2 /* FilterItem.swift */; };
 		303B6B05248F65C300EA89B2 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B04248F65C300EA89B2 /* FilterManager.swift */; };
 		303B6B07248F670000EA89B2 /* ImageFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B06248F670000EA89B2 /* ImageFiltering.swift */; };
+		303B6B09248F6C0800EA89B2 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B08248F6C0800EA89B2 /* FilterCell.swift */; };
+		303B6B0B248F725900EA89B2 /* PhotoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B0A248F725900EA89B2 /* PhotoFilterViewController.swift */; };
 		30AD4DA5248CAB290087CD16 /* San Francisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D97248CAB290087CD16 /* San Francisco.json */; };
 		30AD4DA6248CAB290087CD16 /* Boston.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D98248CAB290087CD16 /* Boston.json */; };
 		30AD4DA7248CAB290087CD16 /* New York.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D99248CAB290087CD16 /* New York.json */; };
@@ -71,6 +73,8 @@
 		303B6B02248F654100EA89B2 /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
 		303B6B04248F65C300EA89B2 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		303B6B06248F670000EA89B2 /* ImageFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFiltering.swift; sourceTree = "<group>"; };
+		303B6B08248F6C0800EA89B2 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		303B6B0A248F725900EA89B2 /* PhotoFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterViewController.swift; sourceTree = "<group>"; };
 		30AD4D97248CAB290087CD16 /* San Francisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "San Francisco.json"; sourceTree = "<group>"; };
 		30AD4D98248CAB290087CD16 /* Boston.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Boston.json; sourceTree = "<group>"; };
 		30AD4D99248CAB290087CD16 /* New York.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "New York.json"; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 				84E0FC4A2396B28800916540 /* PhotoFilter.storyboard */,
 				303B6B04248F65C300EA89B2 /* FilterManager.swift */,
 				303B6B06248F670000EA89B2 /* ImageFiltering.swift */,
+				303B6B08248F6C0800EA89B2 /* FilterCell.swift */,
+				303B6B0A248F725900EA89B2 /* PhotoFilterViewController.swift */,
 			);
 			path = PhotoFilter;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				303B6B03248F654100EA89B2 /* FilterItem.swift in Sources */,
+				303B6B0B248F725900EA89B2 /* PhotoFilterViewController.swift in Sources */,
 				303B6AF0248D983B00EA89B2 /* RestaurantDataManager.swift in Sources */,
 				303B6AFD248F5D4800EA89B2 /* ReviewFormViewController.swift in Sources */,
 				30AD4DB6248CAF7C0087CD16 /* LocationItem.swift in Sources */,
@@ -472,6 +479,7 @@
 				303B6B07248F670000EA89B2 /* ImageFiltering.swift in Sources */,
 				84E0FC3D2396A09700916540 /* RestaurantItem.swift in Sources */,
 				84E29C16239603F600FA9598 /* LocationDataManager.swift in Sources */,
+				303B6B09248F6C0800EA89B2 /* FilterCell.swift in Sources */,
 				84E29C122395FE4700FA9598 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
