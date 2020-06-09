@@ -19,6 +19,7 @@
 		303B6B07248F670000EA89B2 /* ImageFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B06248F670000EA89B2 /* ImageFiltering.swift */; };
 		303B6B09248F6C0800EA89B2 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B08248F6C0800EA89B2 /* FilterCell.swift */; };
 		303B6B0B248F725900EA89B2 /* PhotoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B0A248F725900EA89B2 /* PhotoFilterViewController.swift */; };
+		303B6B0F24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B0D24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld */; };
 		30AD4DA5248CAB290087CD16 /* San Francisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D97248CAB290087CD16 /* San Francisco.json */; };
 		30AD4DA6248CAB290087CD16 /* Boston.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D98248CAB290087CD16 /* Boston.json */; };
 		30AD4DA7248CAB290087CD16 /* New York.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D99248CAB290087CD16 /* New York.json */; };
@@ -75,6 +76,7 @@
 		303B6B06248F670000EA89B2 /* ImageFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFiltering.swift; sourceTree = "<group>"; };
 		303B6B08248F6C0800EA89B2 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		303B6B0A248F725900EA89B2 /* PhotoFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterViewController.swift; sourceTree = "<group>"; };
+		303B6B0E24901ECC00EA89B2 /* LetsEatModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsEatModel.xcdatamodel; sourceTree = "<group>"; };
 		30AD4D97248CAB290087CD16 /* San Francisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "San Francisco.json"; sourceTree = "<group>"; };
 		30AD4D98248CAB290087CD16 /* Boston.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Boston.json; sourceTree = "<group>"; };
 		30AD4D99248CAB290087CD16 /* New York.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "New York.json"; sourceTree = "<group>"; };
@@ -170,6 +172,14 @@
 				303B6B02248F654100EA89B2 /* FilterItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		303B6B0C24901EA400EA89B2 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				303B6B0D24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		30AD4D96248CAAEB0087CD16 /* JSON */ = {
@@ -271,6 +281,7 @@
 		84E0FC402396A56700916540 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				303B6B0C24901EA400EA89B2 /* Core Data */,
 				303B6AF1248E010900EA89B2 /* No Data */,
 				30AD4D96248CAAEB0087CD16 /* JSON */,
 				84E0FC412396A58900916540 /* DataManager.swift */,
@@ -469,6 +480,7 @@
 				84E0FC4F2396B39800916540 /* Segue.swift in Sources */,
 				303B6AF3248E015100EA89B2 /* NoDataView.swift in Sources */,
 				303B6AED248D964A00EA89B2 /* RestaurantCell.swift in Sources */,
+				303B6B0F24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld in Sources */,
 				303B6B05248F65C300EA89B2 /* FilterManager.swift in Sources */,
 				84C54DED238EB08700D7C4A7 /* SceneDelegate.swift in Sources */,
 				84E0FC512396B4B900916540 /* RestaurantDetailViewController.swift in Sources */,
@@ -676,6 +688,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		303B6B0D24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				303B6B0E24901ECC00EA89B2 /* LetsEatModel.xcdatamodel */,
+			);
+			currentVersion = 303B6B0E24901ECC00EA89B2 /* LetsEatModel.xcdatamodel */;
+			path = LetsEatModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84C54DDF238EB08700D7C4A7 /* Project object */;
 }
