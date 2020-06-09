@@ -20,6 +20,10 @@
 		303B6B09248F6C0800EA89B2 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B08248F6C0800EA89B2 /* FilterCell.swift */; };
 		303B6B0B248F725900EA89B2 /* PhotoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B0A248F725900EA89B2 /* PhotoFilterViewController.swift */; };
 		303B6B0F24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B0D24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld */; };
+		303B6B112490204E00EA89B2 /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B102490204E00EA89B2 /* ReviewItem.swift */; };
+		303B6B142490220F00EA89B2 /* RestaurantPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B132490220F00EA89B2 /* RestaurantPhotoItem.swift */; };
+		303B6B162490237600EA89B2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B152490237600EA89B2 /* CoreDataManager.swift */; };
+		303B6B182490311C00EA89B2 /* ReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6B172490311C00EA89B2 /* ReviewDataManager.swift */; };
 		30AD4DA5248CAB290087CD16 /* San Francisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D97248CAB290087CD16 /* San Francisco.json */; };
 		30AD4DA6248CAB290087CD16 /* Boston.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D98248CAB290087CD16 /* Boston.json */; };
 		30AD4DA7248CAB290087CD16 /* New York.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D99248CAB290087CD16 /* New York.json */; };
@@ -77,6 +81,10 @@
 		303B6B08248F6C0800EA89B2 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		303B6B0A248F725900EA89B2 /* PhotoFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterViewController.swift; sourceTree = "<group>"; };
 		303B6B0E24901ECC00EA89B2 /* LetsEatModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsEatModel.xcdatamodel; sourceTree = "<group>"; };
+		303B6B102490204E00EA89B2 /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
+		303B6B132490220F00EA89B2 /* RestaurantPhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPhotoItem.swift; sourceTree = "<group>"; };
+		303B6B152490237600EA89B2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		303B6B172490311C00EA89B2 /* ReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDataManager.swift; sourceTree = "<group>"; };
 		30AD4D97248CAB290087CD16 /* San Francisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "San Francisco.json"; sourceTree = "<group>"; };
 		30AD4D98248CAB290087CD16 /* Boston.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Boston.json; sourceTree = "<group>"; };
 		30AD4D99248CAB290087CD16 /* New York.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "New York.json"; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				303B6B02248F654100EA89B2 /* FilterItem.swift */,
+				303B6B102490204E00EA89B2 /* ReviewItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,8 +187,17 @@
 			isa = PBXGroup;
 			children = (
 				303B6B0D24901ECC00EA89B2 /* LetsEatModel.xcdatamodeld */,
+				303B6B152490237600EA89B2 /* CoreDataManager.swift */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		303B6B12249021F300EA89B2 /* PhotoReviews */ = {
+			isa = PBXGroup;
+			children = (
+				303B6B132490220F00EA89B2 /* RestaurantPhotoItem.swift */,
+			);
+			path = PhotoReviews;
 			sourceTree = "<group>";
 		};
 		30AD4D96248CAAEB0087CD16 /* JSON */ = {
@@ -241,6 +259,7 @@
 		84C54DE9238EB08700D7C4A7 /* LetsEat */ = {
 			isa = PBXGroup;
 			children = (
+				303B6B12249021F300EA89B2 /* PhotoReviews */,
 				84E0FC492396B27400916540 /* PhotoFilter */,
 				84E0FC482396B26B00916540 /* ReviewForm */,
 				84E0FC452396B24100916540 /* RestaurantDetail */,
@@ -287,6 +306,7 @@
 				84E0FC412396A58900916540 /* DataManager.swift */,
 				84E0FC4E2396B39800916540 /* Segue.swift */,
 				30AD4DB3248CAB820087CD16 /* RestaurantAPIManager.swift */,
+				303B6B172490311C00EA89B2 /* ReviewDataManager.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -467,16 +487,19 @@
 				303B6B03248F654100EA89B2 /* FilterItem.swift in Sources */,
 				303B6B0B248F725900EA89B2 /* PhotoFilterViewController.swift in Sources */,
 				303B6AF0248D983B00EA89B2 /* RestaurantDataManager.swift in Sources */,
+				303B6B182490311C00EA89B2 /* ReviewDataManager.swift in Sources */,
 				303B6AFD248F5D4800EA89B2 /* ReviewFormViewController.swift in Sources */,
 				30AD4DB6248CAF7C0087CD16 /* LocationItem.swift in Sources */,
 				30AD4DB8248CBA690087CD16 /* ExploreHeaderView.swift in Sources */,
 				8491B5E82394A85400642EF9 /* ExploreItem.swift in Sources */,
 				84E0FC422396A58900916540 /* DataManager.swift in Sources */,
+				303B6B142490220F00EA89B2 /* RestaurantPhotoItem.swift in Sources */,
 				84E0FC3F2396A42400916540 /* MapDataManager.swift in Sources */,
 				30AD4DB4248CAB820087CD16 /* RestaurantAPIManager.swift in Sources */,
 				303B6AFB248F4C8200EA89B2 /* RatingsView.swift in Sources */,
 				84C54DEB238EB08700D7C4A7 /* AppDelegate.swift in Sources */,
 				84E4C86923900AC400B241E3 /* RestaurantListViewController.swift in Sources */,
+				303B6B162490237600EA89B2 /* CoreDataManager.swift in Sources */,
 				84E0FC4F2396B39800916540 /* Segue.swift in Sources */,
 				303B6AF3248E015100EA89B2 /* NoDataView.swift in Sources */,
 				303B6AED248D964A00EA89B2 /* RestaurantCell.swift in Sources */,
@@ -488,6 +511,7 @@
 				84E7F005238F52B3001F7B0D /* ExploreViewController.swift in Sources */,
 				8491B5EA2394AA2200642EF9 /* ExploreDataManager.swift in Sources */,
 				8491B5ED2394ACA600642EF9 /* ExploreCell.swift in Sources */,
+				303B6B112490204E00EA89B2 /* ReviewItem.swift in Sources */,
 				303B6B07248F670000EA89B2 /* ImageFiltering.swift in Sources */,
 				84E0FC3D2396A09700916540 /* RestaurantItem.swift in Sources */,
 				84E29C16239603F600FA9598 /* LocationDataManager.swift in Sources */,
