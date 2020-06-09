@@ -12,6 +12,7 @@
 		303B6AF3248E015100EA89B2 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6AF2248E015100EA89B2 /* NoDataView.swift */; };
 		303B6AF5248E01A500EA89B2 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 303B6AF4248E01A400EA89B2 /* NoDataView.xib */; };
 		303B6AFB248F4C8200EA89B2 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6AFA248F4C8200EA89B2 /* RatingsView.swift */; };
+		303B6AFD248F5D4800EA89B2 /* ReviewFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B6AFC248F5D4800EA89B2 /* ReviewFormViewController.swift */; };
 		30AD4DA5248CAB290087CD16 /* San Francisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D97248CAB290087CD16 /* San Francisco.json */; };
 		30AD4DA6248CAB290087CD16 /* Boston.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D98248CAB290087CD16 /* Boston.json */; };
 		30AD4DA7248CAB290087CD16 /* New York.json in Resources */ = {isa = PBXBuildFile; fileRef = 30AD4D99248CAB290087CD16 /* New York.json */; };
@@ -61,6 +62,7 @@
 		303B6AF2248E015100EA89B2 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		303B6AF4248E01A400EA89B2 /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
 		303B6AFA248F4C8200EA89B2 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		303B6AFC248F5D4800EA89B2 /* ReviewFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewController.swift; sourceTree = "<group>"; };
 		30AD4D97248CAB290087CD16 /* San Francisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "San Francisco.json"; sourceTree = "<group>"; };
 		30AD4D98248CAB290087CD16 /* Boston.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Boston.json; sourceTree = "<group>"; };
 		30AD4D99248CAB290087CD16 /* New York.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "New York.json"; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				84E0FC4C2396B29200916540 /* ReviewForm.storyboard */,
 				303B6AFA248F4C8200EA89B2 /* RatingsView.swift */,
+				303B6AFC248F5D4800EA89B2 /* ReviewFormViewController.swift */,
 			);
 			path = ReviewForm;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				303B6AF0248D983B00EA89B2 /* RestaurantDataManager.swift in Sources */,
+				303B6AFD248F5D4800EA89B2 /* ReviewFormViewController.swift in Sources */,
 				30AD4DB6248CAF7C0087CD16 /* LocationItem.swift in Sources */,
 				30AD4DB8248CBA690087CD16 /* ExploreHeaderView.swift in Sources */,
 				8491B5E82394A85400642EF9 /* ExploreItem.swift in Sources */,

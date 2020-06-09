@@ -42,6 +42,9 @@ class RestaurantDetailViewController: UITableViewController {
 
 private extension RestaurantDetailViewController {
     
+    /// Dismiss the review form screen
+    @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {}
+    
     /// Temporary method to hard-assign a rating for testing purposes.
     func createRating() {
         ratingView.rating = 3.5
